@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui"
+		/>
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<title>My App</title>
+		<!-- Path to Framework7 Library CSS-->
+		<link rel="stylesheet" href="css/framework7.ios.min.css" />
+		<link rel="stylesheet" href="css/framework7.ios.colors.min.css" />
+		<link rel="stylesheet" href="css/framework7-icons.css">
+		<!-- Path to your custom app styles-->
+		<link rel="stylesheet" href="css/my-app.css" />
+	</head>
+	<body>
+		<div class="statusbar-overlay"></div>
+    <div class="panel-overlay"></div>
+
+		<div class="panel panel-left panel-cover bg-lightblue ">
+			<div class="content-block ">
+				<div class="list-block ">
+					<ul>
+						<li class="custom-panel-item">
+							<div class="item-inner">
+								<div class="item-title">
+									<a href="about.html" class="item-link close-panel">about</a>
+								</div>
+							</div>
+						</li>
+						<li class="custom-panel-item">
+							<div class="item-inner">
+								<div class="item-title">
+									<a href="#" class="custom-page item-link close-panel">custom</a>
+								</div>
+							</div>
+						</li>
+						<li class="custom-panel-item">
+							<div class="item-inner">
+								<div class="item-title">
+									<a href="index.html" class="item-link close-panel">home</a>
+								</div>
+							</div>
+						</li>
+					</ul>
+			</div>
+
+			</div>
+		</div>
+		<div class="views">
+			<div class="view view-main">
+				<!-- Top Navbar-->
+				<div class="navbar">
+					<div class="navbar-inner">
+						<div class="left"> appp</div>
+						<div class="right">
+							<a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a></div>
+					</div>
+				</div>
+				<!-- Bottom Toolbar-->
+        <div class="toolbar ">
+          <div class="toolbar-inner  bg-lightblue ">
+            <a href="#" class="link color-white ">Link 1</a
+            ><a href="#" class="link color-white">Link 2</a>
+          </div>
+        </div>
+				<!-- Inner Page-->
+				<div class="pages navbar-through toolbar-through">
+					<div class="page" data-page="index">
+						<div class="page-content">
+							<!-- <div class="preloader"></div> -->
+							<div class="posts"></div>
+
+							<script type="text/template7" id="productsTemplate">
+								<div class="card demo-card-header-pic">
+									<div style="background-image:url({{product.thumbnail}})" class="card-header color-white no-border">						
+									</div>
+									<div class="card-content">
+										<div class="card-content-inner">
+											<h3 class="">{{product.title}}</h3>
+											<p>{{product.description}}</p>
+										</div>
+									</div>
+									<div class="card-footer">
+										<a href="product.html?id={{product.id}}" class="button">
+											buy now
+										</a>
+										<p>$ {{product.price}}</p>
+									</div>
+								</div>
+							</script>
+						</div>
+					</div>					 
+				</div>				
+			</div>			
+		</div>
+
+		
+		<!-- Path to Framework7 Library JS-->
+		<script type="text/javascript" src="js/framework7.min.js"></script>
+		<!-- Path to your app js-->
+		<script type="text/javascript" src="js/my-app.js"></script>
+	</body>
+</html>

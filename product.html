@@ -1,0 +1,98 @@
+<!-- Top Navbar-->
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="left">
+      <a href="#" class="back link">
+       <i class="icon icon-back"></i>
+      </a>
+    </div>
+    <div class="center sliding product-title">product</div>
+    <div class="right">
+      <a href="#" class="link icon-only open-panel">
+        <i class="icon icon-bars"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="pages">
+  <div class="page" data-page="product">
+    <div class="page-content">      
+      <div class="product-container">        
+      </div>
+      <script type="text/template7" id="productTemplate">
+        <!-- Slider  -->
+        <div class="swiper-container ">
+          <!-- Slides wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            {{#each product.images}}
+            <div class="swiper-slide">
+              <img src="{{this}}" alt="" >
+            </div>            
+            {{/each}}            
+          </div>
+          <div class="swiper-pagination"></div>          
+        </div>
+        <!-- content -->
+        <div class="content-block">
+          <!-- discount | stock | rating -->          
+          <div class="row mb-2">            
+            <div class="col-33">
+              <div class="chip bg-red py-2 px-1">
+                <div class="chip-label flex item-center content-between">
+                  <i class="f7-icons">percent</i>
+                  <span>{{product.discountPercentage}}</span>
+                </div>
+              </div>               
+            </div>
+            <div class="col-33">
+              <div class="chip bg-green py-2 px-1">
+                <div class="chip-label flex item-center content-between">
+                  <i class="f7-icons">layers</i>
+                  <span>{{product.stock}}</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-33  text-right">
+              <div class="chip bg-yellow py-2 px-1">
+                <div class="chip-label flex item-center content-between">
+                  <i class="f7-icons">star</i>
+                  <span>{{product.rating}}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- brand | category -->
+          <div class="row">            
+            <div class="col-50">
+              <div class="chip bg-lightblue">
+                <div class="chip-label">{{product.brand}}</div>
+              </div>  
+            </div>
+            <div class="col-50 flex-end ">
+              <div class="chip bg-yellow">
+                <div class="chip-label ">{{product.category}}</div>
+              </div>
+            </div>
+          </div>
+          <!-- title | price -->
+          <div class="row title-price">
+            <div class="col-50">
+              <h2>{{product.title}}</h2>
+            </div>
+            <div class="col-50 text-right">
+                <span class="chip-label price">${{product.price}}</span>
+                <span class="chip-label price discount-price">
+                  ${{salePrice}}</span>
+            </div>
+          </div>
+          <!-- description -->
+          <p>{{product.description}}</p>          
+        </div>       
+      </script>
+    </div>
+  </div>
+</div>
