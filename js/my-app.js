@@ -4,16 +4,14 @@ const productsTemplate = $$('script#productsTemplate').html();
 const compiledProductsTemplate = Template7.compile(productsTemplate);
 
 $$(document).on('pageInit', async function (e){
-	if (e.detail.page.name === 'index') {
-		$$('.posts').html('<div class="loader-wrapper"><span class="loader"></span></div>')
+	if (e.detail.page.name === 'index') {		
 		const data = await fetchData(null)
 		const products = await data.products
 		if(products.length){
 			products.forEach(product => {
 				const html = compiledProductsTemplate({product});
 				$$('.posts').append(html);
-			})		
-			$$('.loader-wrapper').remove();
+			})	
 		}
 	}	
 })
